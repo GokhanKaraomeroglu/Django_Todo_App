@@ -8,11 +8,18 @@
 	<hr>
 </center>
 </h2>
-
+<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %} {{form}}
+	<input type="submit" value="Add">
+</form>
 	<div>
 		<ul>
 			{% for todo in todos %}
-				<li>{{todo}}</li> <br>
+			{% if todo.completed %}
+			<a href="{% url 'update' todo.id %}">	<li><del>{{todo}}</li> </del><br> </a>
+			{% else %}
+				<a href="{% url 'update' todo.id %}">	<li>{{todo}}</li> <br> </a>
+			{% endif %}	
 			{% endfor %}	
 		</ul>
 	</div>
