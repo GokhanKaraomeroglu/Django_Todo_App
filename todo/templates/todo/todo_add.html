@@ -8,5 +8,12 @@
 		<hr>
 	</center>
 	</h2>
+
+	<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %} {{form}}
+
+    <input type="submit" value="Add">
+
+</form>
 		 
 {% endblock content %}
