@@ -11,7 +11,7 @@
 
 	<div>
     <form action="" , method="POST">
-        {% csrf_token %} Are you sure delete {{todo}}?<br>
+        {% csrf_token %} Are you sure delete? <br> {{todo}}<br>
 
         <a href="{% url 'list'%}"></a>
         <input type="submit" value="Yes">
