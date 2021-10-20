@@ -2,14 +2,18 @@
 
 
 {% block content %}
-   
+<h2>
+<center>
+	Yapılacaklar Listesi <br> 
+	<hr>
+</center>
+</h2>
+
 	<div>
 		<ul>
-			
 			{% for todo in todos %}
-				<li>{{todo}}</li>
-			{% endfor %}
-				
+				<li>{{todo}}</li> <br>
+			{% endfor %}	
 		</ul>
 	</div>
 		 
